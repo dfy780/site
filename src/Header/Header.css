@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    position: sticky;
+    justify-content: space-around;
+    padding-inline: 2rem;
+    background-color: white;
+    height: 40px;
+}
+
+.aList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    width: 50%;
+    list-style-type: none;
+}
