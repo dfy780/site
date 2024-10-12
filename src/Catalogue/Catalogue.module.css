@@ -1,0 +1,63 @@
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 40px;
+    transition: all 0.3s;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.card {
+    background-color: aliceblue;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+    padding-top: 15px;
+    line-height: normal;
+    text-align: center;
+    transition: ease 0.4s;
+}
+
+.card:hover {
+    background-color: #f5f5dc;
+    transition: ease 0.4s;
+}
+
+.card p {
+    margin-block: 10px;
+}
+
+.card img {
+    height: 70%;
+    width: 90%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.card svg {
+    width: 30px;
+    height: 30px;
+}
+
+.card button {
+    background-color: #ffe5c4;
+    transition: ease 0.2s;
+    position: relative;
+    left: 120px;
+    bottom: 40px;
+    border: none;
+}
+
+.card button:hover {
+    background-color: #40326E;
+    transition: ease 0.2s;
+}

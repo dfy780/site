@@ -1,10 +1,28 @@
 nav {
+    z-index: 10;
     display: flex;
-    position: sticky;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    position: fixed;
     justify-content: space-around;
-    padding-inline: 2rem;
+    /* padding-inline: 2rem; */
     background-color: white;
     height: 40px;
+}
+
+nav a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-block: auto;
+    text-decoration: none;
+}
+
+nav a svg {
+    margin-block: auto;
+    height: 20px;
+    width: 20px;
 }
 
 .aList {
@@ -12,6 +30,41 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0;
-    width: 50%;
+    padding-left: 0;
+    /* width: 50%; */
+    height: 100%;
     list-style-type: none;
+}
+
+.aList li {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-inline: 2rem;
+    padding-top: auto;
+    text-align: center;
+    height: inherit;
+    transition: background-color 0.5s ease;
+}
+
+.aList li:hover {
+
+    background-color: beige;
+    transition: background-color 0.5s ease;
+}
+
+.searchBox {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.searchBox svg {
+    height: 20px;
+    width: 20px;
+}
+
+.searchImg {
+    margin-left: 5px;
+    height: 20px;
 }
