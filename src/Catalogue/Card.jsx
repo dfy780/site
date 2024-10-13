@@ -1,17 +1,33 @@
 import styles from "./Catalogue.module.css";
+import Cookies from "js-cookie";
+import { Link } from "react-router-dom";
 
-export default function Card({ imgsrc, pkey, name }) {
+function clickHandler(tcode) {
+  let codes = [];
+  if (Cookies.get("cartCodes")) {
+    codes = Cookies.get("cartCodes");
+    codes.push(tcode);
+  } else codes = tcode;
+  Cookies.set("cartCodes", codes);
+}
+
+export default function Card({ imgsrc, pkey, name, tcode }) {
   return (
     <div key={pkey} className={styles.card}>
       <img src={imgsrc} alt="Image" />
       <span>
         <b>{name}</b>
       </span>
-      <p>Артикул</p>
+      <p>{tcode}</p>
       <p>
         <b>Цена</b>
       </p>
-      <button>
+      <a
+        href="/cart"
+        onClick={() => {
+          clickHandler(tocde);
+        }}
+      >
         <svg
           aria-hidden="true"
           focusable="false"
@@ -20,7 +36,7 @@ export default function Card({ imgsrc, pkey, name }) {
         >
           <path d="M19.884 21.897a.601.601 0 0 1-.439.186h-15a.6.6 0 0 1-.439-.186.601.601 0 0 1-.186-.439v-15a.6.6 0 0 1 .186-.439.601.601 0 0 1 .439-.186h3.75c0-1.028.368-1.911 1.104-2.646.735-.735 1.618-1.104 2.646-1.104s1.911.368 2.646 1.104c.735.736 1.104 1.618 1.104 2.646h3.75a.6.6 0 0 1 .439.186.601.601 0 0 1 .186.439v15a.604.604 0 0 1-.186.439zM18.819 7.083h-3.125v2.5a.598.598 0 0 1-.186.439c-.124.124-.271.186-.439.186s-.315-.062-.439-.186a.6.6 0 0 1-.186-.439v-2.5h-5v2.5a.598.598 0 0 1-.186.439c-.124.124-.271.186-.439.186s-.315-.062-.439-.186a.6.6 0 0 1-.186-.439v-2.5H5.069v13.75h13.75V7.083zm-8.642-3.018a2.409 2.409 0 0 0-.733 1.768h5c0-.69-.244-1.279-.732-1.768s-1.077-.732-1.768-.732-1.279.244-1.767.732z"></path>
         </svg>
-      </button>
+      </a>
     </div>
   );
 }

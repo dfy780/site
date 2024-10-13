@@ -1,5 +1,6 @@
 import "./Header.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -33,7 +34,7 @@ export default function Header() {
           </svg>
         </div>
       </div>
-      <a href="">
+      <a href="/cart">
         <svg
           aria-hidden="true"
           focusable="false"

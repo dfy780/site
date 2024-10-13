@@ -18,6 +18,7 @@ function getItems(page) {
         imgsrc={`/src/assets/${Math.floor(Math.random() * 4) + 1}.jpg`}
         key={i}
         name={i + 1}
+        tcode={i}
       />
     );
   }
