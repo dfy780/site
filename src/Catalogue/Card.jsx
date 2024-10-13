@@ -1,15 +1,7 @@
 import styles from "./Catalogue.module.css";
-import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
 
-function clickHandler(tcode) {
-  let codes = [];
-  if (Cookies.get("cartCodes")) {
-    codes = Cookies.get("cartCodes");
-    codes.push(tcode);
-  } else codes = tcode;
-  Cookies.set("cartCodes", codes);
-}
+function clickHandler(tcode) {}
 
 export default function Card({ imgsrc, pkey, name, tcode }) {
   return (
@@ -25,7 +17,7 @@ export default function Card({ imgsrc, pkey, name, tcode }) {
       <a
         href="/cart"
         onClick={() => {
-          clickHandler(tocde);
+          clickHandler(tcode);
         }}
       >
         <svg

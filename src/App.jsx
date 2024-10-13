@@ -4,6 +4,7 @@ import Header from "./Header/Header";
 import Catalogue from "./Catalogue/Catalogue";
 import { getPageQuantity } from "./Catalogue/Catalogue";
 import Pages from "./Pages/Pages";
+import Cart from "./Cart/Cart";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { div } from "framer-motion/client";
 
@@ -23,7 +24,7 @@ function App() {
         </>
       ),
     },
-    { path: "/cart", element: <div>Placeholder</div> },
+    { path: "/cart", element: <Cart /> },
   ]);
 
   return (

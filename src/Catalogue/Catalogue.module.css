@@ -44,12 +44,13 @@
 }
 
 .card svg {
+    background-color: #ffe5c4;
     width: 30px;
     height: 30px;
 }
 
 .card a {
-    background-color: #ffe5c4;
+
     transition: ease 0.2s;
     position: relative;
     left: 120px;
@@ -57,7 +58,7 @@
     border: none;
 }
 
-.card a:hover {
+.card svg:hover {
     background-color: #40326E;
     transition: ease 0.2s;
     cursor: pointer;
