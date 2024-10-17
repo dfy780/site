@@ -5,11 +5,11 @@ export default function Header() {
   return (
     <nav>
       <ul className="aList">
-        <li>Жидкости</li>
-        <li>Расходники</li>
-        <li>Электронки</li>
-        <li>Одноразки</li>
-        <li>Предзаказ</li>
+        <li>Категория 1</li>
+        <li>Категория 2</li>
+        <li>Категория 3</li>
+        <li>Категория 4</li>
+        <li>Категория 5</li>
       </ul>
       <div className="searchBox">
         <input name="search"></input>

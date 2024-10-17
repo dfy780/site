@@ -29,7 +29,7 @@
     transition: ease 0.4s;
 }
 
-.card div {
+.content {
     padding-left: 30px;
 }
 
@@ -50,15 +50,41 @@
     background-color: #ffe5c4;
     width: 30px;
     height: 30px;
+    transition: ease 0.2s;
 }
 
-.card a {
-
-    transition: ease 0.2s;
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     position: relative;
-    left: 120px;
-    bottom: 40px;
+    left: 130px;
+    bottom: 35px;
     border: none;
+}
+
+.cart button {
+    border-style: none;
+    border-radius: 40px;
+    background: none;
+    margin: 0 5px;
+    padding-block: 10px;
+    text-align: center;
+    width: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: ease 0.2s;
+}
+
+.cart button:hover {
+    background-color: #40326E;
+    border-radius: 40px;
+    transition: ease 0.2s;
+}
+
+.cart span {
+    width: 100px;
+    text-align: center;
 }
 
 .card svg:hover {
